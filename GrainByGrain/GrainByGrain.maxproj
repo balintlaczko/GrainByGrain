@@ -2,9 +2,9 @@
 	"name" : "GrainByGrain",
 	"version" : 1,
 	"creationdate" : 3780551582,
-	"modificationdate" : 3781005874,
-	"viewrect" : [ 25.0, 119.0, 300.0, 500.0 ],
-	"autoorganize" : 1,
+	"modificationdate" : 3781756641,
+	"viewrect" : [ 569.0, 100.0, 300.0, 500.0 ],
+	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
 	"autolocalize" : 0,
@@ -16,8 +16,26 @@
 				"toplevel" : 1
 			}
 ,
+			"ui.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"link_test.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"media" : 		{
+			"screw_norm.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"gaffer_scramble_2.wav" : 			{
+				"kind" : "audiofile",
 				"local" : 1
 			}
 
