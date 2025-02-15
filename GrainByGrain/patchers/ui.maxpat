@@ -2,42 +2,17 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 5,
-			"revision" : 6,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 448.0, -1174.0, 1252.0, 983.0 ],
-		"bglocked" : 0,
+		"rect" : [ 134.0, 134.0, 1252.0, 983.0 ],
 		"openinpresentation" : 1,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
-		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-4",
@@ -78,7 +53,7 @@
 						"drunk_wrap" : [ 0.0 ],
 						"fades_ms" : [ 0.1 ],
 						"gain_variance" : [ 0.0 ],
-						"limiter_lookahead" : [ 0.999999999999999 ],
+						"limiter_lookahead" : [ 1.0 ],
 						"limiter_post" : [ 0.0 ],
 						"limiter_pre" : [ 0.0 ],
 						"limiter_threshold" : [ -0.1 ],
@@ -86,14 +61,13 @@
 						"load" : [ 0.0 ],
 						"metro_jitter" : [ 0.0 ],
 						"metro_rate" : [ 20.000000000000007 ],
-						"num_active_grains" : [ 0 ],
-						"pan_variance" : [ 0.0 ],
+						"num_active_grains" : [ 1 ],
 						"pitch_variance" : [ 0.0 ],
 						"player_mode" : [ 0.0 ],
 						"slice" : [ 0.0 ],
 						"slicer_donebang" : [ 0.0 ],
 						"slicer_foundgrains" : [ 0 ],
-						"slicer_highpass" : [ 84.999999999999972 ],
+						"slicer_highpass" : [ 96.999999999999986 ],
 						"slicer_minslicelength" : [ 20.0 ],
 						"slicer_offthreshold" : [ -6.0 ],
 						"slicer_onthreshold" : [ 6.0 ]
@@ -121,7 +95,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-6",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -139,9 +113,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1110.0, 650.5, 38.0, 15.0 ],
+					"patching_rect" : [ 1110.0, 650.5, 38.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 195.0, 199.381037846207619, 15.0 ],
+					"presentation_rect" : [ 0.0, 195.0, 199.381037846207619, 17.0 ],
 					"text" : "Limiter",
 					"textcolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ],
 					"textjustification" : 1
@@ -200,8 +174,11 @@
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_initial" : [ 1 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Lock",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "link_lock",
 							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Lock",
 							"parameter_type" : 2
 						}
@@ -236,9 +213,12 @@
 							"parameter_exponent" : 2.5,
 							"parameter_initial" : [ 1 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Lookahead",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "limiter_lookahead",
 							"parameter_mmax" : 5.0,
 							"parameter_mmin" : 0.1,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Lookahead",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2
@@ -266,9 +246,12 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Post",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "limiter_post",
 							"parameter_mmax" : 12.0,
 							"parameter_mmin" : -12.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Post",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -296,9 +279,12 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Pre",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "limiter_pre",
 							"parameter_mmax" : 12.0,
 							"parameter_mmin" : -12.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Pre",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -326,9 +312,12 @@
 						"valueof" : 						{
 							"parameter_initial" : [ -0.1 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Threshold",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "limiter_threshold",
 							"parameter_mmax" : -0.1,
 							"parameter_mmin" : -12.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Threshold",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -356,8 +345,11 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 0.0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "GainVariance",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "gain_variance",
 							"parameter_mmax" : 36.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "GainVariance",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -378,9 +370,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 840.0, 630.0, 38.0, 15.0 ],
+					"patching_rect" : [ 840.0, 630.0, 38.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 465.0, 90.0, 38.0, 15.0 ],
+					"presentation_rect" : [ 465.0, 90.0, 38.0, 17.0 ],
 					"text" : "Grains:",
 					"textcolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ],
 					"textjustification" : 1
@@ -406,8 +398,11 @@
 							"parameter_enum" : [ "Scrub", "Metro", "Sequence", "Link" ],
 							"parameter_initial" : [ 0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Mode",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "player_mode",
 							"parameter_mmax" : 3,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Mode",
 							"parameter_type" : 2,
 							"parameter_unitstyle" : 9
@@ -422,35 +417,6 @@
 , 			{
 				"box" : 				{
 					"appearance" : 1,
-					"id" : "obj-34",
-					"maxclass" : "live.dial",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 600.0, 480.0, 64.833333333333258, 36.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 436.212543487548828, 120.0, 57.212543487548828, 36.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 0.0 ],
-							"parameter_initial_enable" : 1,
-							"parameter_longname" : "PanVariance",
-							"parameter_mmax" : 100.0,
-							"parameter_shortname" : "PanVariance",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 5
-						}
-
-					}
-,
-					"varname" : "pan_variance"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"appearance" : 1,
 					"id" : "obj-9",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -459,13 +425,16 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 407.666666666666515, 480.0, 64.833333333333258, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 369.864111423492432, 120.0, 64.355400800704956, 36.0 ],
+					"presentation_rect" : [ 394.0, 120.0, 64.355400800704956, 36.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ 0.0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Pitch Variance (St)",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "pitch_variance",
 							"parameter_mmax" : 12.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "PitchVariance",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 9
@@ -490,9 +459,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 900.0, 630.0, 45.0, 17.0 ],
+					"patching_rect" : [ 900.0, 630.0, 45.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 510.0, 90.0, 44.668989181518555, 17.0 ],
+					"presentation_rect" : [ 510.0, 90.0, 44.668989181518555, 19.0 ],
 					"textcolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ],
 					"triangle" : 0,
 					"varname" : "num_active_grains"
@@ -509,7 +478,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 678.166666666666742, 480.0, 64.833333333333258, 36.0 ],
+					"patching_rect" : [ 674.0, 480.0, 64.833333333333258, 36.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 315.0, 120.0, 52.871080160140991, 36.0 ],
 					"saved_attribute_attributes" : 					{
@@ -521,9 +490,12 @@
 							"parameter_exponent" : 1.35,
 							"parameter_initial" : [ 0.1 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Fades",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "fades_ms",
 							"parameter_mmax" : 10.0,
 							"parameter_mmin" : 0.1,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Fades",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2
@@ -554,6 +526,8 @@
 							"parameter_longname" : "drunk_forwardstep",
 							"parameter_mmax" : 256.0,
 							"parameter_mmin" : 1.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "ForwardStep",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -584,6 +558,8 @@
 							"parameter_longname" : "drunk_backwardstep",
 							"parameter_mmax" : 256.0,
 							"parameter_mmin" : 1.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "BackwardStep",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -612,9 +588,12 @@
 							"parameter_exponent" : 3.5,
 							"parameter_initial" : [ 20 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Rate",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "metro_rate",
 							"parameter_mmax" : 1000.0,
 							"parameter_mmin" : 1.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Rate",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2
@@ -649,10 +628,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 540.0, 345.0, 69.0, 15.0 ],
+					"patching_rect" : [ 540.0, 345.0, 69.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 120.0, 120.0, 52.0, 24.0 ],
+					"presentation_rect" : [ 120.0, 120.0, 52.0, 28.0 ],
 					"text" : "Backward Step",
 					"textjustification" : 1
 				}
@@ -667,10 +646,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 735.0, 345.0, 63.0, 15.0 ],
+					"patching_rect" : [ 735.0, 345.0, 63.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 255.0, 120.0, 49.0, 24.0 ],
+					"presentation_rect" : [ 255.0, 120.0, 49.0, 28.0 ],
 					"text" : "Forward Step",
 					"textjustification" : 1
 				}
@@ -685,9 +664,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1080.0, 375.0, 64.0, 15.0 ],
+					"patching_rect" : [ 1080.0, 375.0, 65.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 315.0, 90.0, 64.0, 15.0 ],
+					"presentation_rect" : [ 315.0, 90.0, 65.0, 17.0 ],
 					"text" : "Current grain:",
 					"textcolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ]
 				}
@@ -707,8 +686,11 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "Wrap",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "drunk_wrap",
 							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Wrap",
 							"parameter_type" : 2
 						}
@@ -737,8 +719,11 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 0.0 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Jitter",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "metro_jitter",
 							"parameter_mmax" : 100.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Jitter",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 5
@@ -766,8 +751,11 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 50 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Forward Chance",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "drunk_forwardchance",
 							"parameter_mmax" : 100.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Forward Chance",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 5
@@ -791,10 +779,23 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1170.0, 375.0, 49.0, 17.0 ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 1170.0, 375.0, 49.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 377.835420906543732, 88.926654785871506, 60.0, 17.0 ],
+					"presentation_rect" : [ 377.835420906543732, 88.926654785871506, 60.0, 19.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_invisible" : 1,
+							"parameter_linknames" : 1,
+							"parameter_longname" : "current_grain",
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
+							"parameter_shortname" : "current_grain",
+							"parameter_type" : 3
+						}
+
+					}
+,
 					"textcolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ],
 					"varname" : "current_grain"
 				}
@@ -856,8 +857,11 @@
 							"parameter_exponent" : 4.0,
 							"parameter_initial" : [ 85 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Highpass",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "slicer_highpass",
 							"parameter_mmax" : 10000.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Highpass",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3
@@ -893,9 +897,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 456.5, 75.0, 64.0, 15.0 ],
+					"patching_rect" : [ 456.5, 75.0, 64.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 135.0, 0.0, 64.0, 15.0 ],
+					"presentation_rect" : [ 135.0, 0.0, 64.0, 17.0 ],
 					"text" : "Found grains:",
 					"textcolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ]
 				}
@@ -916,8 +920,11 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "Load",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "load",
 							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Load",
 							"parameter_type" : 2
 						}
@@ -945,9 +952,12 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 20 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "MinSliceLength",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "slicer_minslicelength",
 							"parameter_mmax" : 1000.0,
 							"parameter_mmin" : 1.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "MinSliceLength",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2
@@ -974,8 +984,11 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "Slice",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "slice",
 							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Slice",
 							"parameter_type" : 2
 						}
@@ -1004,9 +1017,12 @@
 						"valueof" : 						{
 							"parameter_initial" : [ -6 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "Off Threshold",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "slicer_offthreshold",
 							"parameter_mmax" : 0.0,
 							"parameter_mmin" : -24.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "Off Threshold",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -1034,8 +1050,11 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 6 ],
 							"parameter_initial_enable" : 1,
-							"parameter_longname" : "On Threshold",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "slicer_onthreshold",
 							"parameter_mmax" : 24.0,
+							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "On Threshold",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -1078,9 +1097,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 516.5, 75.0, 42.0, 17.0 ],
+					"patching_rect" : [ 516.5, 75.0, 42.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 195.0, 0.0, 60.0, 17.0 ],
+					"presentation_rect" : [ 195.0, 0.0, 60.0, 19.0 ],
 					"textcolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ],
 					"triangle" : 0,
 					"varname" : "slicer_foundgrains"
@@ -1127,43 +1146,7 @@
 
 			}
  ],
-		"parameters" : 		{
-			"obj-113" : [ "Threshold", "Threshold", 0 ],
-			"obj-114" : [ "Pre", "Pre", 0 ],
-			"obj-131" : [ "Post", "Post", 0 ],
-			"obj-134" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-138" : [ "Jitter", "Jitter", 0 ],
-			"obj-156" : [ "Wrap", "Wrap", 0 ],
-			"obj-162" : [ "On Threshold", "On Threshold", 0 ],
-			"obj-163" : [ "Off Threshold", "Off Threshold", 0 ],
-			"obj-164" : [ "Slice", "Slice", 0 ],
-			"obj-165" : [ "MinSliceLength", "MinSliceLength", 0 ],
-			"obj-169" : [ "Load", "Load", 0 ],
-			"obj-22" : [ "Rate", "Rate", 0 ],
-			"obj-24" : [ "drunk_backwardstep", "BackwardStep", 0 ],
-			"obj-25" : [ "drunk_forwardstep", "ForwardStep", 0 ],
-			"obj-34" : [ "PanVariance", "PanVariance", 0 ],
-			"obj-44" : [ "Mode", "Mode", 0 ],
-			"obj-74" : [ "Lock", "Lock", 0 ],
-			"obj-77" : [ "Fades", "Fades", 0 ],
-			"obj-80" : [ "Forward Chance", "Forward Chance", 0 ],
-			"obj-87" : [ "Highpass", "Highpass", 0 ],
-			"obj-9" : [ "Pitch Variance (St)", "PitchVariance", 0 ],
-			"obj-98" : [ "GainVariance", "GainVariance", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [  ],
-		"autosave" : 0
+		"originid" : "pat-3174"
 	}
 
 }
